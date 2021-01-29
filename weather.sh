@@ -13,4 +13,14 @@ curl \
     -H "User-Agent: $UA" \
     -o result.html \
     wttr.in/$CITY
-    #wttr.in/$CITY?format=4\&$UNIT
+
+#wttr.in/$CITY?format=4\&$UNIT
+
+
+CHAT_ID=$1
+BOT_TOKEN=$2
+SEND_TEXT=`cat result.html`
+
+curl -k \
+     --data chat_id="$CHAT_ID" \
+     --data "text=$SEND_TEXT" "https://api.telegram.org/bot$BOT_TOKEN/sendMessage"
