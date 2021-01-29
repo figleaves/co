@@ -12,8 +12,9 @@ curl \
     -H "Accept-Language: $LANGUAGE" \
     -H "User-Agent: $UA" \
     -o result.html \
-    wttr.in/$CITY
+    rate.sx/eth
 
+#wttr.in/$CITY
 #wttr.in/$CITY?format=4\&$UNIT
 
 
