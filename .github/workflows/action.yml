@@ -24,7 +24,7 @@ jobs:
                 username: ${{ secrets.MAIL_USERNAME }}
                 password: ${{ secrets.MAIL_PASSWORD }}
                 subject: shenzhen weather report (${{ env.REPORT_DATE }})
-                body: file://result.html
+                body: file://result1.html
                 to: philtest@foxmail.com
                 from: GH Actions
                 content_type: text/html
