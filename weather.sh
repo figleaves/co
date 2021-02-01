@@ -7,7 +7,6 @@ LANGUAGE="zh-CN"
 UNIT=m
 UA="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36"
 
-rm result*.html
 curl rate.sx/?qFT > result0.html
 cat result0.html |grep "^│"|awk -F "│" '{print $3 $4 $5 $6}' > result1.html
 sed -i 's/Coin .*/  Coin     Price      Change(24H)   (1H)/g' result1.html
