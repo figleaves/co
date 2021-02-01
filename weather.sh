@@ -11,6 +11,9 @@ curl rate.sx/?qFT > result0.html
 cat result0.html |grep "^│"|awk -F "│" '{print $3 $4 $5 $6}' > result1.html
 sed -i 's/Coin .*/  Coin     Price      Change(24H)   (1H)/g' result1.html
 
+COINS=$3
+cat result1.html |egrep "$COINS" > result1.html
+
 
 #wttr.in/$CITY
 #wttr.in/$CITY?format=4\&$UNIT
