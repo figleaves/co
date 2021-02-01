@@ -23,7 +23,7 @@ jobs:
                 server_port: 465
                 username: ${{ secrets.MAIL_USERNAME }}
                 password: ${{ secrets.MAIL_PASSWORD }}
-                subject: shenzhen weather report (${{ env.REPORT_DATE }})
+                subject: rate.sx (${{ env.REPORT_DATE }})
                 body: file://result1.html
                 to: philtest@foxmail.com
                 from: GH Actions
