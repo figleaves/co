@@ -13,7 +13,7 @@ jobs:
           - name: "Checkout codes"
             uses: actions/checkout@v1
           - name: "Get Weather"
-            run: bash ./weather.sh ${{ secrets.CHAT_ID }} ${{ secrets.BOT_TOKEN }} ${{ secrets.Coins_B }}
+            run: bash ./weather.sh ${{ secrets.CHAT_ID }} ${{ secrets.BOT_TOKEN }} "${{ secrets.Coins_B }}"
           - name: "Get Date"
             run: echo "REPORT_DATE=$(TZ=':Asia/Shanghai' date '+%Y-%m-%d %T')" >> $GITHUB_ENV
           - name: "Send mail"
