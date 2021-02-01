@@ -19,12 +19,12 @@ jobs:
           - name: "Send mail"
             uses: dawidd6/action-send-mail@master
             with:
-                server_address: smtphz.qiye.163.com
+                server_address: smtp.163.com
                 server_port: 465
                 username: ${{ secrets.MAIL_USERNAME }}
                 password: ${{ secrets.MAIL_PASSWORD }}
                 subject: shenzhen weather report (${{ env.REPORT_DATE }})
                 body: file://result.html
-                to: figleaves@foxmail.com
-                from: Github Actions
+                to: philtest@foxmail.com
+                from: GH Actions
                 content_type: text/html
